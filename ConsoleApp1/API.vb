@@ -83,15 +83,14 @@ Module Module1
             If Events.Items IsNot Nothing And Events.Items.Count > 0 Then
                 Console.WriteLine("Si  hay eventos!")
 
-                For ev  in Events.Items
-                
+                For Each ev As Data.Event In Events.Items
+                    Dim hora As String = ev.Start.DateTime.ToString()
+                    Console.WriteLine("{0} ({1})", ev.Summary, hora)
                 Next
 
 
-                Console.WriteLine(Events.Items(0).ToString())
 
-                Dim hora As String = Events.Items(0).Start.DateTime.ToString()
-                Console.WriteLine("{0} ({1})", Events.Items(0).Summary, hora)
+
 
 
             Else
