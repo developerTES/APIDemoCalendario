@@ -131,7 +131,7 @@ Module Module1
             Dim recurringEvent = service.Events.Insert(ev, calendarId).Execute()
             Console.WriteLine("Event created: %s\n", ev.HtmlLink)
         Catch ex As Exception
-            Console.WriteLine("Exception ..! ")
+            Console.WriteLine("Exception .! ")
             Console.WriteLine(ex.StackTrace)
             Console.WriteLine(ex.Message)
             Console.Read()
